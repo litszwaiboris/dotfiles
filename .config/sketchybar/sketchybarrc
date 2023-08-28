@@ -1,5 +1,5 @@
 ############## BAR ##############
-sketchybar -m --bar height=30 \
+sketchybar -m --bar height=40 \
                     blur_radius=0 \
                     position=bottom \
                     padding_left=5 \
@@ -14,11 +14,10 @@ sketchybar -m --bar height=30 \
 ############## GLOBAL DEFAULTS ##############
 sketchybar -m --default updates=when_shown \
                         drawing=on \
-                        cache_scripts=on \
-                        icon.font="MesloLGS NF:Regular:13.0" \
+                        icon.font="MesloLGS Nerd Font:Regular:14.0" \
                         icon.color=0xffECEFF4 \
                         icon.highlight_color=0xffA3BE8C \
-                        label.font="MesloLGS NF:Regular:12.0" \
+                        label.font="MesloLGS Nerd Font:Regular:14.0" \
                         label.color=0xffECEFF4
 
 ############## SPACE DEFAULTS ##############
@@ -29,10 +28,12 @@ sketchybar -m --default label.padding_left=0 \
 
 sketchybar -m --add item logo left \
               --set logo icon= \
+	            icon.padding_left=10 \
+		    icon.padding_right=10 \
                     background.color=0xffBF616A \
-                    background.height=25 \
+                    background.height=30 \
                     background.padding_right=10 \
-		    background.corner_radius=4 \
+		    background.corner_radius=8 \
                     click_script="~/.config/skhd/restart_wm.sh"
 
 ############## PRIMARY DISPLAY SPACES ##############
@@ -40,6 +41,8 @@ sketchybar -m --add space web left \
               --set web associated_space=1 \
                          associated_display=1 \
                          icon="󰖟 web" \
+			 icon.padding_left=10 \
+			 icon.padding_right=10 \
                          click_script="yabai -m space --focus 1" \
                          background.color=0xffD8DEE9 \
                          background.drawing=off \
@@ -48,7 +51,9 @@ sketchybar -m --add space web left \
               --add space social left \
               --set social associated_display=1 \
                          associated_space=2 \
-                         icon=" social" \
+                         icon="󰍡 social" \
+			 icon.padding_left=10 \
+			 icon.padding_right=10 \
                          click_script="yabai -m space --focus 2" \
                          background.color=0xffD8DEE9 \
                          background.drawing=off \
@@ -58,6 +63,8 @@ sketchybar -m --add space web left \
               --set dev associated_display=1 \
                          associated_space=3 \
                          icon="󰨞 dev" \
+			 icon.padding_left=10 \
+			 icon.padding_right=10 \
                          click_script="yabai -m space --focus 3" \
                          background.color=0xffD8DEE9 \
                          background.drawing=off \
@@ -66,35 +73,40 @@ sketchybar -m --add space web left \
               --add space gaming left \
               --set gaming associated_display=1 \
                          associated_space=4 \
-                         icon="󰊖 gaming" \
+                         icon="󰸼 gaming" \
+			 icon.padding_left=10 \
+			 icon.padding_right=10 \
                          click_script="yabai -m space --focus 4" \
                          background.color=0xffD8DEE9 \
                          background.drawing=off \
               --subscribe gaming mouse.entered mouse.exited \
                                                                  \
-              --add space other left \
-              --set other associated_display=1 \
+              --add space misc left \
+              --set misc associated_display=1 \
                          associated_space=5 \
-                         icon=" other" \
+                         icon=" misc" \
+			 icon.padding_left=10 \
+			 icon.padding_right=10 \
                          click_script="yabai -m space --focus 5" \
                          background.color=0xffD8DEE9 \
                          background.drawing=off \
-              --subscribe other mouse.entered mouse.exited \
+              --subscribe misc mouse.entered mouse.exited \
                                                                  \
 
 sketchybar -m --add item window_title left \
               --set window_title script="~/.config/sketchybar/plugins/window_title.sh" \
 		    background.color=0xff3B4252 \
-		    background.corner_radius=4 \
-		    background.height=25 \
+		    background.corner_radius=8 \
+		    background.height=30 \
+		    icon.padding_left=10 \
+		    icon.padding_right=10 \
 		    background.padding_left=10\
 	      --subscribe window_title front_app_switched 
 
 ############## ITEM DEFAULTS ###############
 sketchybar -m --default label.padding_left=0 \
-                        icon.padding_right=3 \
                         icon.padding_left=6 \
-                        label.padding_right=3
+                        icon.padding_right=6 
 
 ############## RIGHT ITEMS ##############
 
@@ -103,29 +115,38 @@ sketchybar -m --add item battery right \
                             script="~/.config/sketchybar/plugins/power.sh" \
                             background.color=0xff3B4252 \
 			    background.padding_left=10 \
-			    background.corner_radius=4 \
-                            background.height=25 \
-			    icon.font="MesloLGS NF:Regular:10.0" 
+			    background.corner_radius=8 \
+			    background.padding_left=10 \
+			    background.padding_right=10 \
+                            background.height=30 \
+			    icon.font="MesloLGS NF:Regular:10.0" \
+			    icon.padding_left=10 \
+			    label.padding_right=10 
 
 sketchybar -m --add item clock right \
               --set clock update_freq=1 \
                           script="~/.config/sketchybar/plugins/clock.sh" \
-			  click_script="open /Applications/Calendar.app" \
+			  click_script="open /System/Applications/Calendar.app" \
 			  icon="󰃮" \
+			  icon.padding_left=10 \
+			  label.padding_right=10 \
 			  icon.color=0xffB48EAD \
                           background.color=0xff3B4252 \
-                          background.height=25 \
-			  background.corner_radius=4 \
-			  background.padding_left=10 
+                          background.height=30 \
+			  background.padding_left=10 \
+			  background.padding_right=10 \
+			  background.corner_radius=8 
 
 
 sketchybar -m --add item volume right \
               --set volume script="~/.config/sketchybar/plugins/volume.sh" \
 	                   icon.color=0xffD08770 \
                            background.color=0xff3B4252 \
-                           background.height=25 \
-			   background.corner_radius=4 \
+                           background.height=30 \
+			   background.corner_radius=8 \
 			   background.padding_left=10 \
+			   icon.padding_left=10 \
+                           label.padding_right=10 \
               --subscribe volume volume_change
 
 sketchybar -m --add item net right \
@@ -133,30 +154,36 @@ sketchybar -m --add item net right \
 	                        click_script="~/.config/sketchybar/plugins/wifi.sh" \
                                 background.color=0xff3B4252 \
 				icon.color=0xff81A1C1 \
-				background.corner_radius=4 \
-                                background.height=25 \
+				background.corner_radius=8 \
+                                background.height=30 \
+				icon.padding_left=10 \
+				label.padding_right=10 \
 	      --subscribe net wifi_change
 
 sketchybar -m --add item media right \
               --set media script="~/.config/sketchybar/plugins/music.sh" \
 	                  click_script="~/.config/sketchybar/plugins/music_click.sh" \
 			  icon.color=0xff88C0D0 \
+			  icon.padding_left=10 \
+			  icon.padding_right=10 \
+			  label.padding_right=10 \
 			  background.color=0xff3B4252 \
-			  background.corner_radius=4 \
+			  background.corner_radius=8 \
 			  background.padding_right=10 \
-			  background.height=25 \
-	      --subscribe media media_change
+			  background.height=30 \
+	                  update_freq=10 \
 
 ############## BRACKETS ##############
  sketchybar -m --add bracket primary_spaces web \
                                             social \
                                             dev \
                                             gaming \
-                                            other \
+                                            misc \
   \
                --set primary_spaces background.color=0xff3B4252 \
-                                    background.corner_radius=4 \
-                                    background.height=25 
+                                    background.corner_radius=8 \
+				    background.padding_right=10 \
+                                    background.height=30 
 
 ############## FINALIZING THE SETUP ##############
 sketchybar -m --update

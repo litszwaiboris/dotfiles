@@ -35,9 +35,11 @@ end if')
 if [ $CHECK == "a" ]; then
     ICON="󰝚"
     sketchybar -m --set media icon="$ICON" \
+                  --set media label.drawing=on \
                   --set media label="${TITLE} - ${ARTIST}"
 else
     ICON="󰝛"
-    sketchybar -m --set media icon="$ICON" 
+    sketchybar -m --set media icon="$ICON" \
+                  --set media label.drawing=off
 fi
 

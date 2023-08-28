@@ -5,6 +5,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 set fish_greeting
 
 if status is-interactive
-        pfetch
+	cd $HOME
+	pfetch
 end
 starship init fish | source

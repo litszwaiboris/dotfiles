@@ -1,4 +1,13 @@
--- Lazy.vim (Package Manager) Setup
+-- environment
+
+vim.g.loaded_netrw=1
+vim.g.loaded_netrwPlugin=1
+vim.opt.laststatus=2
+vim.opt.showtabline=2
+vim.opt.termguicolors = true
+vim.cmd("set background=dark")
+
+-- lazy.vim
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -13,42 +22,35 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local lazy = require('lazy')
-
 local plugins = {
-  'lambdalisue/nerdfont.vim',
-  'sharkdp/fd',
-  'nixprime/cpsm',
-  'romgrk/fzy-lua-native',
-  'nvim-tree/nvim-web-devicons',
-  'roxma/vim-hug-neovim-rpc',
-  'roxma/nvim-yarp',
-  'lewis6991/gitsigns.nvim',
-  'nvim-tree/nvim-tree.lua',
-  'nvim-tree/nvim-web-devicons',
-  'Shatur/neovim-ayu',
-  'tamton-aquib/staline.nvim',
+
+  -- staline
+  {
+      "tamton-aquib/staline.nvim",
+  },
+
+  -- nvimtree
+  {
+      "nvim-tree/nvim-tree.lua",
+      depenencies = {
+          'nvim-tree/nvim-web-devicons',
+      },
+  },
+
+  -- colorscheme
+  {
+      "Shatur/neovim-ayu",
+  },
 }
+local lazy = require("lazy")
 
 lazy.setup(plugins, opts)
 
--- Environment Config
+-- staline
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.opt.termguicolors = true
-vim.opt.laststatus=2
-vim.opt.showtabline=2
+local staline = require('staline')
 
--- Keybindings
-
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-map('n', '<C-k>', '<Cmd>NvimTreeToggle<CR>', opts)
-
--- Staline (Status Line) Setup
-
-require('staline').setup {
+staline.setup{
     defaults = {
         expand_null_ls = false,  -- This expands out all the null-ls sources to be shown
         left_separator  = "",
@@ -71,16 +73,16 @@ require('staline').setup {
         null_ls_symbol = "",          -- A symbol to indicate that a source is coming from null-ls
     },
     mode_colors = {
-        n = "#85fe62",
-        i = "#c6abff",
-        c = "#ffd966",
-        v = "#62effe",   -- etc..
+        n = "#d2a6ff",
+        i = "#ffad66",
+        c = "#aad94c",
+        v = "#73d0ff",   -- etc..
     },
     mode_icons = {
-        n = " ",
-        i = " ",
+        n = "󰈈 ",
+        i = "󰏫 ",
         c = " ",
-        v = " ",   -- etc..
+        v = "󰒆 ",   -- etc..
     },
     sections = {
         left = { '- ', '-mode', 'left_sep_double', ' ', 'branch' },
@@ -94,80 +96,47 @@ require('staline').setup {
     },
     special_table = {
         NvimTree = { 'NvimTree', ' ' },
-        packer = { 'Packer',' ' },        -- etc
+        lazy = { 'Lazy',' ' },        -- etc
     },
     lsp_symbols = {
-        Error=" ",
-        Info=" ",
+        Error=" ",
+        Info=" ",
         Warn=" ",
         Hint="",
     },
 }
 
--- Stabline (Bufferlines) Setup
 
-require('stabline').setup {
-    style       = "bubble", -- others: arrow, slant, bubble
-    font_active = "bold",
-    fg          = "#ffffff",
-    bg          = "#df8133",
-    exclude_fts = { 'NvimTree', 'dashboard', 'lir' },
-    stab_start  = "",   -- The starting of stabline
-    stab_end    = "",
-    numbers = function(bufn, n)
-        return '*'..n..' '
-    end
-}
+-- nvimtree
 
--- NvimTree (Directory Sidebar) Setup
+local nvimtree = require("nvim-tree")
+local gheight = vim.api.nvim_list_uis()[1].height
+local gwidth = vim.api.nvim_list_uis()[1].width
+local width = 50
+local height = 30
 
-local tree = require("nvim-tree")
-local HEIGHT_RATIO = 0.8
-local WIDTH_RATIO = 0.5
-
-tree.setup({
+nvimtree.setup({
   view = {
     float = {
       enable = true,
-      open_win_config = function()
-        local screen_w = vim.opt.columns:get()
-        local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
-        local window_w = screen_w * WIDTH_RATIO
-        local window_h = screen_h * HEIGHT_RATIO
-        local window_w_int = math.floor(window_w)
-        local window_h_int = math.floor(window_h)
-        local center_x = (screen_w - window_w) / 2
-        local center_y = ((vim.opt.lines:get() - window_h) / 2)
-                         - vim.opt.cmdheight:get()
-        return {
-          border = 'rounded',
-          relative = 'editor',
-          row = center_y,
-          col = center_x,
-          width = window_w_int,
-          height = window_h_int,
-        }
-        end,
-    },
-    width = function()
-      return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
-    end,
-  },
-  filters = {
-    dotfiles = true,
-  },
-  renderer = {
-    indent_markers = { enable = true },
-    icons = {
-      show = {
-        file = true,
-	folder = true,
-	folder_arrow = false,
-	git = true,
+      quit_on_focus_loss = true,
+      open_win_config = {
+        relative = "editor",
+	border = "rounded",
+        relative = "editor",
+        width = width,
+        height = height,
+        row = (gheight - height) * 0.5,
+        col = (gwidth - width) * 0.5,
       }
     }
-  },
+  }
 })
 
--- Colorscheme Setup
-vim.cmd("colorscheme ayu-mirage")
+-- colorscheme
+
+require('ayu').setup({
+    mirage = true
+})
+
+vim.cmd("colorscheme ayu")

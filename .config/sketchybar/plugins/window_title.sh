@@ -9,4 +9,4 @@ case $WINDOW_TITLE in
   *);;
 esac
 
-sketchybar -m --set $NAME icon=" $WINDOW_TITLE"
+sketchybar -m --set $NAME icon="  $WINDOW_TITLE"
