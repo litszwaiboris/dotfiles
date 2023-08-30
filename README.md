@@ -45,7 +45,11 @@ Third, replace the number after `click_script="yabai -m space --focus "` as the 
                          background.drawing=off \
               --subscribe misc mouse.entered mouse.exited \
                                                                  \
-...
+```
+
+Fourth, find the below section near the end of `~/.config/sketchybarrc/sketchybarrc` and replace [REPLACE_THIS!!!!] as the name of your workspace.
+
+```
 sketchybar -m --add bracket primary_spaces web \
                                             social \
                                             dev \
