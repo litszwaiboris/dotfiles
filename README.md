@@ -19,6 +19,8 @@ Clone this repository to anywhere and run `install.sh` and it will automatically
 You can customize this rice for yourself
 
 Icons:
+
 Battery `~/.config/sketchybar/plugins/power.sh` 
-- 1. inside `case` and `esac`
-- 2. 
+- line 12 (charging icon)
+- inside `case` and `esac` start from line 19 to 30 (normal icon)
+
