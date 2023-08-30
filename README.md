@@ -27,7 +27,7 @@ Workspace indicators `~/.config/sketchybarrc/sketchybarrc`:
 
 If you want to add workspaces:
 First, Copy and replace [REPLACE_THIS!!!!] as your workspace name.
-Second, replace [ICON_OF_YOUR_LIKING] as your icon and name that you like, check out either SF Symbols software in your mac or ![the nerd font cheat sheet](https://www.nerdfonts.com/cheat-sheet) for icons.
+Second, replace [ICON_OF_YOUR_LIKING] as your icon and name that you like, check out either SF Symbols software in your mac or [the nerd font cheat sheet](https://www.nerdfonts.com/cheat-sheet) for icons.
 Third, replace the number after `click_script="yabai -m space --focus "` as the workspace number.
 ```
               --add space [REPLACE_THIS!!!!] left \
