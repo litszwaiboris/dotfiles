@@ -79,7 +79,7 @@ Volume `~/.config/sketchybar/plugins/volume.sh`
 - inside `case` and `esac` start from 5 to 16 (volume icon)
 
 Date and time `~/.config/sketchybar/sketchybarrc`
-- line 130
+- line 130 (icon)
 
 Battery `~/.config/sketchybar/plugins/power.sh` 
 - line 12 (charging icon)
