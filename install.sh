@@ -88,4 +88,3 @@ echo "Installation Complete, you may find wallpapers online and apply it in your
 echo "Happy ricing!"
 
 exit 0
-

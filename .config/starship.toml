@@ -148,7 +148,7 @@ symbol = " "
 [shell]
 zsh_indicator = " zsh"
 fish_indicator = " fish"
-format = "[$indicator](cyan bold)"
+format = "[󰘳$indicator](cyan bold)"
 disabled = false
 
 [scala]
