@@ -27,9 +27,11 @@ Clone this repository to anywhere and run `install.sh` and it will automatically
 
 ### If you want to add workspaces:
 
-##### First, Copy and replace [REPLACE_THIS!!!!] as your workspace name.
-##### Second, replace [ICON_OF_YOUR_LIKING] as your icon and name that you like, check out either SF Symbols software in your mac or [the nerd font cheat sheet](https://www.nerdfonts.com/cheat-sheet) for icons.
-##### Third, replace the number after `click_script="yabai -m space --focus "` as the workspace number.
+First, Copy and replace [REPLACE_THIS!!!!] as your workspace name in all sections in `~/.config/sketchybarrc/sketchybarrc`.
+
+Second, replace [ICON_OF_YOUR_LIKING] as your icon and name that you like, check out either SF Symbols software in your mac or [the nerd font cheat sheet](https://www.nerdfonts.com/cheat-sheet) for icons.
+
+Third, replace the number after `click_script="yabai -m space --focus "` as the workspace number.
 
 ```
               --add space [REPLACE_THIS!!!!] left \
@@ -43,16 +45,23 @@ Clone this repository to anywhere and run `install.sh` and it will automatically
                          background.drawing=off \
               --subscribe misc mouse.entered mouse.exited \
                                                                  \
+...
+sketchybar -m --add bracket primary_spaces web \
+                                            social \
+                                            dev \
+                                            gaming \
+                                            misc \
+                                            [REPLACE_THIS!!!!] \
 ```
 
-If you want to delete one of the workspaces:
+### If you want to delete one of the workspaces:
 - line 51-61 (second desktop)
 - line 62-72 (third desktop)
 - line 72-83 (fourth desktop)
 - line 84-94 (fifth desktop)
 
 
-Icons for plugins:
+### Icons for plugins:
 
 Spotify Player `~/.config/sketchybar/plugins/music.sh`
 - line 36 (Spotify running)
