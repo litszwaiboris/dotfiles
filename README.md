@@ -25,8 +25,8 @@ Workspace indicators `~/.config/sketchybarrc/sketchybarrc`:
 - line 73, 74, 76, 179 (fourth desktop)
 - line 84, 85, 87, 180 (fifth desktop)
 
-If you want to add workspaces:
-First, Copy and replace [REPLACE_THIS!!!!] as your workspace name.
+If you want to add workspaces:\n
+First, Copy and replace [REPLACE_THIS!!!!] as your workspace name.\n
 Second, replace [ICON_OF_YOUR_LIKING] as your icon and name that you like, check out either SF Symbols software in your mac or [the nerd font cheat sheet](https://www.nerdfonts.com/cheat-sheet) for icons.
 Third, replace the number after `click_script="yabai -m space --focus "` as the workspace number.
 ```
