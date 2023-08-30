@@ -121,6 +121,7 @@ sketchybar -m --add item battery right \
                             background.height=30 \
 			    icon.font="MesloLGS NF:Regular:10.0" \
 			    icon.padding_left=10 \
+			    icon.padding_right=10 \
 			    label.padding_right=10 
 
 sketchybar -m --add item clock right \
@@ -129,12 +130,12 @@ sketchybar -m --add item clock right \
 			  click_script="open /System/Applications/Calendar.app" \
 			  icon="󰃮" \
 			  icon.padding_left=10 \
+			  icon.padding_right=10 \
 			  label.padding_right=10 \
 			  icon.color=0xffB48EAD \
                           background.color=0xff3B4252 \
                           background.height=30 \
 			  background.padding_left=10 \
-			  background.padding_right=10 \
 			  background.corner_radius=8 
 
 
@@ -146,6 +147,7 @@ sketchybar -m --add item volume right \
 			   background.corner_radius=8 \
 			   background.padding_left=10 \
 			   icon.padding_left=10 \
+			   icon.padding_right=10 \
                            label.padding_right=10 \
               --subscribe volume volume_change
 
@@ -157,6 +159,7 @@ sketchybar -m --add item net right \
 				background.corner_radius=8 \
                                 background.height=30 \
 				icon.padding_left=10 \
+				icon.padding_right=10 \
 				label.padding_right=10 \
 	      --subscribe net wifi_change
 
@@ -174,7 +177,7 @@ sketchybar -m --add item media right \
 	                  update_freq=10 \
 
 ############## BRACKETS ##############
- sketchybar -m --add bracket primary_spaces web \
+sketchybar -m --add bracket primary_spaces web \
                                             social \
                                             dev \
                                             gaming \
