@@ -20,11 +20,10 @@ M.ui = {
       { "  Bookmarks", "Spc m a", "Telescope marks" },
       { "  Mappings", "Spc c h", "NvCheatsheet" },
       { "  Terminal", "Spc t t", "terminal"},
-    },
-
+    }
   },
 
-  theme_toggle = { "onedark", "one_light" },
+  theme_toggle = { "ayu_dark", "ayu_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
