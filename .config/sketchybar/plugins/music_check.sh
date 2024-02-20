@@ -6,6 +6,7 @@ ARTIST=$(osascript -e 'if application "Spotify" is running then
         return b
         end tell
 end if')
+
 ALBUM=$(osascript -e 'if application "Spotify" is running then
         tell application "Spotify"
 	set a to the current track

@@ -5,10 +5,11 @@ sketchybar -m --bar height=40 \
                     padding_left=5 \
                     padding_right=5 \
                     margin=8 \
-		    y_offset=3.5 \
+		                y_offset=3.5 \
                     corner_radius=0 \
                     color=0xff2E3440 \
                     border_width=0 \
+                    topmost=off \
                     border_color=0xff2E3440
 
 ############## GLOBAL DEFAULTS ##############
@@ -27,92 +28,92 @@ sketchybar -m --default label.padding_left=0 \
                         icon.padding_right=6
 
 sketchybar -m --add item logo left \
-              --set logo icon= \
-	            icon.padding_left=10 \
-		    icon.padding_right=10 \
-                    background.color=0xffBF616A \
-                    background.height=30 \
-                    background.padding_right=10 \
-		    background.corner_radius=8 \
-                    click_script="~/.config/skhd/restart_wm.sh"
+                         --set logo icon= \
+	                       icon.padding_left=10 \
+		                     icon.padding_right=10 \
+                         background.color=0xffBF616A \
+                         background.height=30 \
+                         background.padding_right=10 \
+	      	               background.corner_radius=8 \
+                         click_script="~/.config/skhd/restart_wm.sh"
 
 ############## PRIMARY DISPLAY SPACES ##############
 sketchybar -m --add space web left \
-              --set web associated_space=1 \
+                         --set web associated_space=1 \
                          associated_display=1 \
                          icon="󰖟 web" \
-			 icon.padding_left=10 \
-			 icon.padding_right=10 \
+		                  	 icon.padding_left=10 \
+		                  	 icon.padding_right=10 \
                          click_script="yabai -m space --focus 1" \
                          background.color=0xffD8DEE9 \
                          background.drawing=off \
-              --subscribe web mouse.entered mouse.exited \
-                                                                 \
-              --add space social left \
-              --set social associated_display=1 \
+                         --subscribe web mouse.entered mouse.exited \
+                                                                    \
+                          --add space social left \
+                         --set social associated_display=1 \
                          associated_space=2 \
                          icon="󰍡 social" \
-			 icon.padding_left=10 \
-			 icon.padding_right=10 \
+	                  		 icon.padding_left=10 \
+                  			 icon.padding_right=10 \
                          click_script="yabai -m space --focus 2" \
                          background.color=0xffD8DEE9 \
                          background.drawing=off \
-              --subscribe social mouse.entered mouse.exited \
-                                                                 \
-              --add space dev left \
-              --set dev associated_display=1 \
+                         --subscribe social mouse.entered mouse.exited \
+                                                                       \
+                        --add space dev left \
+                        --set dev associated_display=1 \
                          associated_space=3 \
                          icon="󰨞 dev" \
-			 icon.padding_left=10 \
-			 icon.padding_right=10 \
+	                  		 icon.padding_left=10 \
+		                  	 icon.padding_right=10 \
                          click_script="yabai -m space --focus 3" \
                          background.color=0xffD8DEE9 \
                          background.drawing=off \
-              --subscribe dev mouse.entered mouse.exited \
-                                                                 \
-              --add space gaming left \
-              --set gaming associated_display=1 \
+                         --subscribe dev mouse.entered mouse.exited \
+                                                                    \
+                         --add space gaming left \
+                          --set gaming associated_display=1 \
                          associated_space=4 \
                          icon="󰸼 gaming" \
-			 icon.padding_left=10 \
-			 icon.padding_right=10 \
+		                  	 icon.padding_left=10 \
+		                  	 icon.padding_right=10 \
                          click_script="yabai -m space --focus 4" \
                          background.color=0xffD8DEE9 \
                          background.drawing=off \
-              --subscribe gaming mouse.entered mouse.exited \
-                                                                 \
-              --add space misc left \
-              --set misc associated_display=1 \
+                         --subscribe gaming mouse.entered mouse.exited \
+                                                                       \
+                         --add space misc left \
+                         --set misc associated_display=1 \
                          associated_space=5 \
                          icon=" misc" \
-			 icon.padding_left=10 \
-			 icon.padding_right=10 \
+		                  	 icon.padding_left=10 \
+		                  	 icon.padding_right=10 \
                          click_script="yabai -m space --focus 5" \
                          background.color=0xffD8DEE9 \
                          background.drawing=off \
-              --subscribe misc mouse.entered mouse.exited \
-                                                                 \
-              --add space school left \
-              --set school associated_display=1 \
-                           associated_space=6 \
-                           icon="󰑴 school" \
-                           icon.padding_left=10 \
-                           icon.padding_right=10 \
-                           click_script="yabai -m space --focus 6" \
-                           background.color=0xffD8DEE9 \
-                           background.drawing=off \
-              --subscribe school mouse.entered mouse.exited \
+                         --subscribe misc mouse.entered mouse.exited \
+                                                                    \
+                         --add space school left \
+                         --set school associated_display=1 \
+                         associated_space=6 \
+                         icon="󰑴 school" \
+                         icon.padding_left=10 \
+                         icon.padding_right=10 \
+                         click_script="yabai -m space --focus 6" \
+                         background.color=0xffD8DEE9 \
+                         background.drawing=off \
+                         --subscribe school mouse.entered mouse.exited \
                                                                  \
 
 sketchybar -m --add item window_title left \
-              --set window_title script="~/.config/sketchybar/plugins/window_title.sh" \
-		    background.color=0xff3B4252 \
-		    background.corner_radius=8 \
-		    background.height=30 \
-		    icon.padding_left=10 \
-		    icon.padding_right=10 \
-		    background.padding_left=10\
-	      --subscribe window_title front_app_switched 
+                         --set window_title script="~/.config/sketchybar/plugins/window_title.sh" \
+		                     background.color=0xff3B4252 \
+	                	     background.corner_radius=8 \
+	                 	     background.height=30 \
+		                     icon.padding_left=10 \
+		                     icon.padding_right=10 \
+		                     background.padding_left=10\
+	                       --subscribe window_title front_app_switched 
 
 ############## ITEM DEFAULTS ###############
 sketchybar -m --default label.padding_left=0 \
@@ -123,82 +124,82 @@ sketchybar -m --default label.padding_left=0 \
 
 sketchybar -m --add item battery right \
               --set battery update_freq=1 \
-                            script="~/.config/sketchybar/plugins/power.sh" \
-                            background.color=0xff3B4252 \
-			    background.padding_left=10 \
-			    background.corner_radius=8 \
-			    background.padding_left=10 \
-			    background.padding_right=10 \
-                            background.height=30 \
-			    icon.font="MesloLGS NF:Regular:10.0" \
-			    icon.padding_left=10 \
-			    icon.padding_right=10 \
-			    label.padding_right=10 
+              script="~/.config/sketchybar/plugins/power.sh" \
+              background.color=0xff3B4252 \
+			        background.padding_left=10 \
+			        background.corner_radius=8 \
+			        background.padding_left=10 \
+			        background.padding_right=10 \
+              background.height=30 \
+			        icon.font="MesloLGS NF:Regular:10.0" \
+			        icon.padding_left=10 \
+			        icon.padding_right=10 \
+			        label.padding_right=10 
 
 sketchybar -m --add item clock right \
               --set clock update_freq=1 \
-                          script="~/.config/sketchybar/plugins/clock.sh" \
-		  	  click_script="open /System/Applications/Calendar.app" \
-		  	  icon="󰃮" \
-		  	  icon.padding_left=10 \
-	  		  icon.padding_right=10 \
-		  	  label.padding_right=10 \
-		  	  icon.color=0xffB48EAD \
-          background.color=0xff3B4252 \
-          background.height=30 \
-	  		  background.padding_left=10 \
-		  	  background.corner_radius=8 
+              script="~/.config/sketchybar/plugins/clock.sh" \
+		  	      click_script="open /System/Applications/Calendar.app" \
+		  	      icon="󰃮" \
+		  	      icon.padding_left=10 \
+	  		      icon.padding_right=10 \
+		  	      label.padding_right=10 \
+		  	      icon.color=0xffB48EAD \
+              background.color=0xff3B4252 \
+              background.height=30 \
+	  		      background.padding_left=10 \
+		  	      background.corner_radius=8 
 
 
 sketchybar -m --add item volume right \
               --set volume script="~/.config/sketchybar/plugins/volume.sh"\
-	                  icon.color=0xffD08770 \
-                    click_script="~/.config/sketchybar/plugins/volume_click.sh"\
-         background.color=0xff3B4252 \
-         background.height=30 \
-			   background.corner_radius=8 \
-			   background.padding_left=10 \
-			   icon.padding_left=10 \
-			   icon.padding_right=10 \
-         label.padding_right=10 \
+	            icon.color=0xffD08770 \
+              click_script="~/.config/sketchybar/plugins/volume_click.sh"\
+              background.color=0xff3B4252 \
+              background.height=30 \
+			        background.corner_radius=8 \
+			        background.padding_left=10 \
+			        icon.padding_left=10 \
+			        icon.padding_right=10 \
+              label.padding_right=10 \
               --subscribe volume volume_change
 
 sketchybar -m --add item net right \
               --set net script="~/.config/sketchybar/plugins/net.sh" \
-	                        click_script="~/.config/sketchybar/plugins/wifi.sh" \
-				update_freq=10 \
-                                background.color=0xff3B4252 \
-				icon.color=0xff81A1C1 \
-				background.corner_radius=8 \
-                                background.height=30 \
-				icon.padding_left=10 \
-				icon.padding_right=10 \
-				label.padding_right=10 \
+	            click_script="~/.config/sketchybar/plugins/wifi.sh" \
+				      update_freq=10 \
+              background.color=0xff3B4252 \
+				      icon.color=0xff81A1C1 \
+			    	  background.corner_radius=8 \
+              background.height=30 \
+				      icon.padding_left=10 \
+				      icon.padding_right=10 \
+				      label.padding_right=10 \
 
 sketchybar -m --add item media right \
               --set media script="~/.config/sketchybar/plugins/music.sh" \
-	                  click_script="~/.config/sketchybar/plugins/music_click.sh" \
-			  icon.color=0xff88C0D0 \
-			  icon.padding_left=10 \
-			  icon.padding_right=10 \
-			  label.padding_right=10 \
-			  background.color=0xff3B4252 \
-			  background.corner_radius=8 \
-			  background.padding_right=10 \
-			  background.height=30 \
-	                  update_freq=10 \
+	            click_script="~/.config/sketchybar/plugins/music_click.sh" \
+			        icon.color=0xff88C0D0 \
+			        icon.padding_left=10 \
+	      		  icon.padding_right=10 \
+		      	  label.padding_right=10 \
+	      		  background.color=0xff3B4252 \
+		      	  background.corner_radius=8 \
+      			  background.padding_right=10 \
+	      		  background.height=30 \
+	            update_freq=10 \
 
 ############## BRACKETS ##############
 sketchybar -m --add bracket primary_spaces web \
-                                            social \
-                                            dev \
-                                            gaming \
-                                            misc \
-                                            school \
+                                           social \
+                                           dev \
+                                           gaming \
+                                           misc \
+                                           school \
   \
                --set primary_spaces background.color=0xff3B4252 \
                                     background.corner_radius=8 \
-				    background.padding_right=10 \
+				                            background.padding_right=10 \
                                     background.height=30 
 
 ############## FINALIZING THE SETUP ##############
