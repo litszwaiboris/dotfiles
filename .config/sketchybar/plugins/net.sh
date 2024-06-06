@@ -6,6 +6,10 @@ connection=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Cur
 
 ethernet=$(ifconfig | grep en8)
 
+if [[ ! -z $ethernet ]]; then
+  networksetup -setairportpower en0 off
+fi
+
 if [[ $get == "On" ]]; then
   if [[ $connection == "running" ]]; then
   	sketchybar -m --set $NAME icon="󰖩 " \

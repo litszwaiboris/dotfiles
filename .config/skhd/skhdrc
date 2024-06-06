@@ -56,9 +56,7 @@ shift + lctrl + alt - up : yabai -m window --insert north
 shift + lctrl + alt - right : yabai -m window --insert east
 
 # Float / Unfloat window
-lctrl + alt - space : \
-    yabai -m window --toggle float; \
-    yabai -m window --toggle border
+lctrl + alt - space : yabai -m window --toggle float;
 
 # Restart Yabai
 shift + lctrl + alt - r : /Users/libor/.config/skhd/restart_wm.sh

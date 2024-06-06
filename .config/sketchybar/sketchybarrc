@@ -167,7 +167,7 @@ sketchybar -m --add item volume right \
 sketchybar -m --add item net right \
               --set net script="~/.config/sketchybar/plugins/net.sh" \
 	            click_script="~/.config/sketchybar/plugins/wifi.sh" \
-				      update_freq=10 \
+				      update_freq=5 \
               background.color=0xff3B4252 \
 				      icon.color=0xff81A1C1 \
 			    	  background.corner_radius=8 \

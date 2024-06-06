@@ -4,4 +4,5 @@ killall Dock
 killall Finder
 yabai --restart-service
 skhd --restart-service
-sketchybar --reload
+brew services restart sketchybar
+brew services restart borders
