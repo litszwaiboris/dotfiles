@@ -5,6 +5,8 @@ Dotfiles for the first time Hyprland Theming posted by u/litszwaiboris
 
 # Preview
 ![Showcase](preview/setup.png)
+![Showcase](preview/setup2.png)
+![Showcase](preview/setup3.png)
 
 # Requirements
 This set of dotfiles requires the packages below:
