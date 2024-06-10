@@ -1,5 +1,5 @@
 # dotfiles
-Dotfiles for the first time MacOS Theming posted by u/litszwaiboris
+Dotfiles for the first time Hyprland Theming posted by u/litszwaiboris
 
 ### If you have any questions or problems encountered in the ricing process, feel free to ask me in Issues
 
