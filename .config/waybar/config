@@ -1,0 +1,81 @@
+{
+	"layer": "top",
+	"modules-left": ["custom/launcher","cpu","tray"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["custom/updates","backlight","custom/pipewire","battery","clock","custom/power"],
+	
+	"hyprland/workspaces": {
+		"format": "{name}: {icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"default": ""
+		},
+		"persistent-workspaces": {
+			"*": 5
+		}
+	},
+
+	"custom/pipewire": {
+		"tooltip": false,
+		"interval": 1,
+		"format": "{}",
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"exec": "$HOME/.config/waybar/scripts/volume.sh",
+	},
+	"network": {
+		"tooltip": false,
+		"format-wifi": "  {essid}",
+		"format-ethernet": ""
+	},
+	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1,
+        "on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5"
+	},
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+	"tray":{
+		"icon-size":18,
+		"spacing": 10
+	},
+    "cpu": {
+        "interval": 15,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}"
+    },
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "$HOME/.config/waybar/scripts/wofi.sh"
+    },
+    "custom/power":{
+        "format": " ",
+        "on-click": "$HOME/.config/waybar/scripts/power.sh",
+    },
+    "custom/updates":{
+        "format": "{} Update(s)",
+        "exec": "$HOME/.config/waybar/scripts/checkupdates.sh",
+        "exec-if": "[[ $($HOME/.config/waybar/scripts/checkupdates.sh) != 0 ]]",
+        "interval": 15,
+        "on-click": "kitty -e sudo dnf update -y && notify-send 'The system has been updated' "
+    }
+}
