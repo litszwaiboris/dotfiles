@@ -2,11 +2,17 @@
 
 config="$HOME/.config/wofi/config"
 style="$HOME/.config/wofi/style.css"
-entries="󰍃 Logout\n⏾ Suspend\n Reboot\n⏻ Shutdown"
+entries=" Lock\n󰗽 Logout\n⏾ Suspend\n Reboot\n⏻ Shutdown"
 
-selected=$(echo -e $entries|wofi --width 250 --height 210 --conf "$config" --style "$style" --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
+if [[ -z $(pgrep wofi) ]]; then
+  selected=$(echo -e $entries|wofi --width 250 --height 210 --conf "$config" --style "$style" --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
+else
+  killall wofi
+fi
 
 case $selected in
+  lock)
+    exec hyprlock;;
   logout)
     hyprctl dispatch exit;;
   suspend)

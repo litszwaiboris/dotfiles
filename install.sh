@@ -10,12 +10,13 @@ sudo -v
 clear
 
 echo "Installing Window Manager"
-sudo dnf install waybar hyprland wofi light pipewire-utils 
+sudo dnf install waybar hyprland wofi light pipewire-utils grim kitty thunar firefox hyprlock hyprpaper 
 
 echo "Completed"
 sleep 0.5
 
 # Installing Nerd Fonts
+clear
 sudo dnf copr enable che/nerd-fonts
 sudo dnf install nerd-fonts
 echo "Completed."
@@ -28,7 +29,7 @@ echo "Copying config and settings"
 cd "$(dirname "$0")"
 dir=$(pwd)
 
-cp -r $dir/* $HOME/
+mkdir -p $dir/.config/* && cp $dir/.config/* $HOME/.config/
 
 echo "Installation Completed"
 

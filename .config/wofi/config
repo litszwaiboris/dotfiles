@@ -9,3 +9,4 @@ print_command=true
 insensitive=true
 prompt=
 columns=2
+allow-images=true
