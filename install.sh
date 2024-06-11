@@ -31,6 +31,8 @@ dir=$(pwd)
 
 mkdir -p $dir/.config/* && cp $dir/.config/* $HOME/.config/
 
+sudo cp catppuccin_triangle.png /usr/share/backgrounds/
+
 echo "Installation Completed"
 
 echo "Happy ricing!"
