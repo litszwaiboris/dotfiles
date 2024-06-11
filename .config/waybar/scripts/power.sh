@@ -1,13 +1,11 @@
 #!/bin/bash
 
-config="$HOME/.config/wofi/config"
-style="$HOME/.config/wofi/style.css"
 entries=" Lock\n󰗽 Logout\n⏾ Suspend\n Reboot\n⏻ Shutdown"
 
-if [[ -z $(pgrep wofi) ]]; then
-  selected=$(echo -e $entries|wofi --width 250 --height 210 --conf "$config" --style "$style" --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
+if [[ -z $(pgrep fuzzel) ]]; then
+  selected=$(echo -e $entries|fuzzel --dmenu --icon-theme Papirus-Dark --font="MesloLGS Nerd Font:size=15" --line-height=25 | awk '{print tolower($2)}')
 else
-  killall wofi
+  killall fuzzel
 fi
 
 case $selected in

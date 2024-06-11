@@ -50,6 +50,19 @@ window#waybar.hidden {
     color: transparent;
 	background: transparent;
 }
+
+
+#tray {
+        margin-top: 6px;
+        margin-left: 8px;
+	padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        transition: none;
+        color: #363a4f;
+        background: #363a4f;
+}
+
 #network {
 	margin-top: 6px;
 	margin-left: 8px;

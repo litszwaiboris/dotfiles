@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","tray"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["custom/updates","backlight","custom/pipewire","battery","clock","custom/power"],
+	"modules-right": ["custom/updates","backlight","custom/pipewire","network","battery","clock","custom/power"],
 	
 	"hyprland/workspaces": {
 		"format": "{name}: {icon}",
@@ -65,7 +65,7 @@
     },
     "custom/launcher":{
         "format": " ",
-        "on-click": "$HOME/.config/waybar/scripts/wofi.sh"
+        "on-click": "$HOME/.config/waybar/scripts/launcher.sh"
     },
     "custom/power":{
         "format": " ",
