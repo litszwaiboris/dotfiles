@@ -9,14 +9,14 @@ sudo -v
 clear
 
 echo "Installing Window Manager"
-sudo dnf install waybar hyprland fuzzel light pipewire-utils grim kitty thunar firefox hyprlock hyprpaper 
+sudo dnf install waybar hyprland fuzzel light pipewire-utils grim kitty thunar firefox hyprlock hyprpaper -y 
 
 echo "Completed"
 sleep 0.5
 
 clear
-sudo dnf copr enable che/nerd-fonts
-sudo dnf install nerd-fonts
+sudo dnf copr enable che/nerd-fonts -y
+sudo dnf install nerd-fonts -y
 echo "Completed."
 sleep 0.5
 clear
