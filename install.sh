@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Init
 echo "Dotfiles Installer for litszwaiboris/dotfiles"
 
 echo "Installing Prerequisites"
@@ -10,12 +9,11 @@ sudo -v
 clear
 
 echo "Installing Window Manager"
-sudo dnf install waybar hyprland wofi light pipewire-utils grim kitty thunar firefox hyprlock hyprpaper 
+sudo dnf install waybar hyprland fuzzel light pipewire-utils grim kitty thunar firefox hyprlock hyprpaper 
 
 echo "Completed"
 sleep 0.5
 
-# Installing Nerd Fonts
 clear
 sudo dnf copr enable che/nerd-fonts
 sudo dnf install nerd-fonts
