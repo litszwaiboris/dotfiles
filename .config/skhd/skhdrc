@@ -1,14 +1,14 @@
 # Navigations
-alt - left : yabai -m window --focus west
-alt - down : yabai -m window --focus south
-alt - up : yabai -m window --focus north
-alt - right : yabai -m window --focus east
+lctrl + alt - left : yabai -m window --focus west
+lctrl + alt - down : yabai -m window --focus south
+lctrl + alt - up : yabai -m window --focus north
+lctrl + alt - right : yabai -m window --focus east
 
 # Moving windows
-lctrl + alt - left : yabai -m window --warp west
-lctrl + alt - down : yabai -m window --warp south
-lctrl + alt - up : yabai -m window --warp north
-lctrl + alt - right : yabai -m window --warp east
+lctrl + alt + shift - left : yabai -m window --warp west
+lctrl + alt + shift - down : yabai -m window --warp south
+lctrl + alt + shift - up : yabai -m window --warp north
+lctrl + alt + shift - right : yabai -m window --warp east
 
 # Switch workspace
 lctrl + alt - 1 : yabai -m space --focus 1
@@ -56,15 +56,14 @@ shift + lctrl + alt - up : yabai -m window --insert north
 shift + lctrl + alt - right : yabai -m window --insert east
 
 # Float / Unfloat window
-lctrl + alt - space : yabai -m window --toggle float;
+ctrl + alt  - space : yabai -m window --toggle float;
 
 # Restart Yabai
 shift + lctrl + alt - r : /Users/libor/.config/skhd/restart_wm.sh
 
 # Terminal
-cmd - 0x24 : /Applications/kitty.app/Contents/MacOS/kitty
+lctrl + alt - t : /Applications/kitty.app/Contents/MacOS/kitty
 
 # Make window native fullscreen
 lctrl + alt - 0x24 : yabai -m window --toggle zoom-fullscreen
-shift + lctrl + alt - 0x24 : yabai -m window --toggle native-fullscreen
-
+meh - 0x24 : yabai -m window --toggle native-fullscreen
