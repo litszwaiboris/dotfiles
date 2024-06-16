@@ -5,7 +5,7 @@
 	"modules-right": ["custom/updates","backlight","custom/pipewire","network","battery","clock","custom/power"],
 	
 	"hyprland/workspaces": {
-		"format": "{name}: {icon}",
+		"format": "{icon}",
 		"format-icons": {
 			"1": "",
 			"2": "",

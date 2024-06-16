@@ -13,7 +13,6 @@ sudo dnf install waybar hyprland fuzzel light pipewire-utils grim kitty thunar f
 
 echo "Completed"
 sleep 0.5
-
 clear
 sudo dnf copr enable che/nerd-fonts -y
 sudo dnf install nerd-fonts -y
@@ -27,12 +26,17 @@ echo "Copying config and settings"
 cd "$(dirname "$0")"
 dir=$(pwd)
 
-mkdir -p $dir/.config/* && cp $dir/.config/* $HOME/.config/
+printf "Is this the correct dotfiles repository directory? %s n/y " $dir
 
-sudo cp catppuccin_triangle.png /usr/share/backgrounds/
+read confirmed
 
-echo "Installation Completed"
-
-echo "Happy ricing!"
-
-exit 0
+if [ ! "$confirmed" = "y" ]; then
+	echo "Please make sure that you navigated to the right path for the repository"
+	exit 0
+else
+	cp --parents -r $dir/.config/* $HOME/.config/
+	sudo cp ./usr/share/backgrounds/catppuccin_triangle.png /usr/share/backgrounds/
+	echo "Installation Completed"
+	echo "Happy ricing!"
+	exit 0
+fi

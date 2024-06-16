@@ -146,9 +146,10 @@ symbol = " "
 symbol = " "
 
 [shell]
-zsh_indicator = " zsh"
-fish_indicator = " fish"
-format = "[󰘳$indicator](cyan bold)"
+zsh_indicator = "zsh"
+fish_indicator = "fish"
+nu_indicator = "nushell"
+format = "[󰘳 $indicator](cyan bold)"
 disabled = false
 
 [scala]

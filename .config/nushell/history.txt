@@ -1,0 +1,467 @@
+clear
+ls
+ls | where size>=10B 
+ls | where size >= 10B 
+ls | where size >= 10B | sort-by modified
+ls | where size >= 10B | sort-by size
+clear
+ls
+ls -a
+clear
+ls --help
+ls | grid
+ls | grid --color
+ls --color
+grid --color
+a
+clear
+ls
+clear
+ls | sort-by type
+ls | sort-by name -i
+ls | sort-by name -d
+ls | sort-by name -r
+ls | sort-by name -i
+ls | sort-by name -i | grid -c
+ls | grid -c -w 30
+clear
+ls
+clear
+ls
+git
+clear
+git | grep
+git | grep a
+git | grep push
+git | grep push | grid
+git | grep push | sort-by 
+git | grep push 
+git | grep push | echo #1
+git | grep push | echo $1
+git | grep push | awk '{print $1}'
+git | grep push | awk '{print $2}'
+git | grep push | awk '{print $1 $2}'
+git | grep push | awk '{print $1-12}'
+git | grep push | awk '{print $1}'
+git | grep push | awk '{print $112}'
+git | grep push | awk '{print}'
+clear
+starship
+starship init 
+starship init nu
+overlay use starship.nu
+overlay use 
+overlay use starship init nu
+overlay use starship
+overlay use starship.nu
+clear
+mkdir ~/.config/starship/
+ls ~/.config/starship
+ls ~/.config/ | grep starship
+ls ~/.config/ 
+ls ~/.config/ | tabpe
+ls ~/.config/ | table
+ls ~/.config/ | table -c
+ls ~/.config/ | where name == "starship"
+ls ~/.config/ | where name contains starship
+ls ~/.config/ | where name == "/home/libor/.config/starship"
+cd 
+cd .config/starship
+ls
+clear
+starship init nu | save -f ~/.config/starship/init.nu
+use ~/.config/starship/init.nu
+clear
+ls
+nvim ~/.config/nushell/config.nu
+exit
+nu
+clear
+nvim ~/.config/starship.toml
+clear
+exit
+ls
+clear
+nvim ~/.config/nushell/config.nu
+exit
+ls
+clear
+exec
+exec fetch
+fetch
+echo $PATH
+echo $env.PATH
+export $env.path
+export 
+fastfetch
+clear
+fastfetch
+fishj
+fosj
+fish
+exit
+nvim ~/.config/nushell/config.nu
+nvim ~/.config/starship/config.nu
+uname
+nvim ~/.config/starship/init.nu
+nvim ~/.config/starship/config.nu
+whereis uname
+fish
+cd /bin
+./fish
+echo $env.PATH
+nu
+exit
+echo $env.PATH
+exit
+ls
+clear
+whereis fetch
+whereis fastfetch
+exit
+nu
+exit
+clear
+exit
+nvim ~/.config/nushell/config.nu
+exit
+ls
+ls | grip -c 
+ls | grid -c
+ls | grid -c -w 30
+ls | grid -c -w 30 | display
+display
+ls
+alias
+alias ls="ls"
+alias ls = "ls | sort-by size"
+ls
+alias ls = ls | sort-by size
+exit
+sudo dracut -fv --regenerate-all -o sdhci_pci | grep sdhci
+exit
+cd /lib/modules/
+ls
+cd 6.8.10-400.asahi.fc40.aarch64+16k/
+ls | sort-by name -i
+ls | sort-by type == dir
+ls | sort-by type dir
+ls | sort-by 
+ls | sort-by type
+ls | sort-by type dir
+ls | sort-by type "dir"
+ls | sort-by type="dir"
+ls | sort-by type=dir
+ls | sort-by type==dir
+ls | sort-by type dir
+ls
+ckear
+clear
+ls where type == dir
+ls | where type == "dir"
+ls
+exit
+ld
+exit
+cd dotfiles
+ls
+git checkout -b 
+git checkout
+git add *
+git commit 
+git push origin HEAD
+cler
+clear
+ls
+git checkout
+git checkout -b mac
+git checkout mac
+clear
+ls
+exit
+r
+exit
+sudo dnf install eww
+sudo dnf copr add varlad/eww
+sudo dnf copr enable varlad/eww
+sudo dnf install eww
+eww
+clear
+eww
+clear
+cd ~/.config
+mkdir eww
+cd eww
+clear
+eww
+eww open
+eww daemon
+sudo dnf remove eww
+sudo dnf copr disaable varlad/eww
+sudo dnf copr disable varlad/eww
+exit
+git clone https://github.com/elkowar/eww<\n>
+cd eww
+cargo 
+sudo dnf install cargo
+cargo build --release --no-default-features --features=wayland<\n>
+sudo dnf install glib-compile-schemas 
+ls
+clear
+sudo dnf install glib2
+sudo dnf install glib2-devel
+cargo build --release --no-default-features --features=wayland<\n>
+sudo dnf install atk
+sudo dnf install atk-devel
+cargo build --release --no-default-features --features=wayland<\n>
+sudo dnf install cairo
+sudo dnf install cairo-devel
+cargo build --release --no-default-features --features=wayland<\n>
+sudo dnf install cairo-gobjectd-devel
+sudo dnf install cairo-gobject-devel
+cargo build --release --no-default-features --features=wayland<\n>
+sudo dnf install dbbusmenu-glib-devel
+sudo dnf install dbusmenu-glib-devel
+sudo dnf install libdbusmenu-gtk3
+sudo dnf install libdbusmenu-gtk3-devel
+sudo dnf install pango
+sudo dnf install pango-devel
+exit
+zsh
+cargo build --release --no-default-features --features=wayland<\n>
+sudo dnf install gtk-layer-shell
+sudo dnf install gtk-layer-shell-devel
+cargo build --release --no-default-features --features=wayland<\n>
+cd target/
+ls
+cd release/
+ls
+eww
+chmod +x eww
+./eww
+mv eww ~/.bin/
+eww
+clear
+eww open
+eww daemon
+eww start
+eww
+eww list-windows
+eww oen
+eww open
+eww open a
+ls
+eww open bar
+nvim ~/.config/eww/eww.yuck
+eww open bar
+nvim ~/.config/eww/eww.yuck
+eww open bar
+nvim ~/.config/eww/eww.yuck
+eww open bar
+nvim ~/.config/eww/eww.yuck
+eww open bar
+nvim ~/.config/eww/eww.yuck
+cd
+cd ~/.config/eww
+touch eww.scss
+eww open bar
+eww open my_bar
+nvim ~/.config/eww/eww.yuck
+eww open my_bar
+nvim ~/.config/eww/eww.yuck
+eww open my_bar
+nvim ~/.config/eww/eww.yuck
+eww open example
+nvim ~/.config/eww/eww.yuck
+eww open my_bar
+nvim ~/.config/eww/eww.yuck
+eww open my_bar
+nvim ~/.config/eww/eww.yuck
+eww open my_bar
+nvim ~/.config/eww/eww.yuck
+eww open my_bar
+nvim ~/.config/eww/eww.yuck
+eww open my_bar
+nvim ~/.config/eww/eww.yuck
+eww open my_bar
+eww open my_bar --debug
+nvim ~/.config/eww/eww.yuck
+eww open my_bar --debug
+nvim ~/.config/eww/eww.yuck
+eww open my_bar --debug
+sudo rm -rf ~/.bin/eww
+ls
+clear
+cd ..
+rm -rf eww/
+exit
+zsh
+exit
+sudo dnf install kde-connect
+kdeconnectd 
+kdeconnectd --help
+kdeconnectd &&
+kdeconnectd;
+kdeconnectd &
+kdeconnect-indicator 
+kdeconnectd
+kdeconnect-indicator 
+clear
+ls
+sudo systemctl enable kdeconnect
+sudo systemctl enable kdeconnectd
+kdeconnect-app
+kdeconnect-cli --refresh
+kdeconnect-cli 
+kdeconnect-cli -d
+kdeconnect-cl--refresh
+exit
+kdeconnect-indicator 
+sudo systemctl status kdeconnectd 
+sudo systemctl status kdeconnect
+sudo systemctl status kdeconnect-indicator 
+cd /usr/share/systemd/
+ls
+cd
+clear
+sudo dnf remove kdeconnect
+sudo dnf remove kdeconnectd 
+exit
+widevine-installer
+sudo widevine-installer
+exot
+exit
+reboot
+sudo dnf install gparted
+sudo gparted
+sudo gparted --help
+gparted
+nvim ~/.config/hypr/hyprland.conf
+exec --no-startup-id /usr/libexec/kf6/polkit-kde-authentication-agent-1
+exec
+exec --no-startup-id /usr/libexec/kf6/polkit-kde-authentication-agent-1
+xeit
+exit
+zsh
+bash
+sudo dnf install lxpolkit
+ls
+clear
+ls
+clear
+exit
+sudo dnf remove polkit-{kde,gnomew}
+sudo dnf remove polkit-{kde,gnome}
+sudo dnf remove polkit-kde
+sudo dnf remove polkit-gnome
+nvim ~/.config/hypr/hyprland.conf
+lxpolkit
+clear
+loginctl 
+loginctl kill-session c3
+Hyprland
+journalctl
+journalctl -x
+journalctl -x Hyprland
+journalctl -xc Hyprland
+journalctl -xf Hyprland
+journalctl
+journalctl -b 0
+ls
+nvim ~/.bashrc
+nvim ~/.zshrc
+bash
+exit
+ls
+clear
+exit
+nvim ~/.config/hypr/hyprland.conf
+nvim ~/.config/
+gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "[{'Gdk/WindowScalingFactor', <2>}]"
+gsettings set org.gnome.desktop.interface scaling-factor 2
+exit
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+cd dotfiles
+git add *
+git commit
+git branch linux-hypr
+git checkoutlinux-hypr
+git checkout linux-hypr
+ls
+sudo add *
+git add *
+git commit
+mkdir -p ./usr/share/backgrounds
+mkdir --parents ./usr/share/backgrounds
+mkdir ./usr/share/backgrounds
+ls
+cd usr
+ls
+cd ..
+ls
+mv catppuccin_triangle.png ./usr/share/backgrounds/
+ls
+sudo cp /usr/share/applications/PyCharm.desktop ./usr/share/applications/
+mkdir ./usr/share/applications
+sudo cp /usr/share/applications/PyCharm.desktop ./usr/share/applications/
+sudo cp /usr/share/applications/IntelliJ-Idea.desktop ./usr/share/applications/
+ls
+nvim install.sh
+./install.sh
+cd dotfiles
+./install.sh
+./install.sh\
+./install.sh
+ls -d .config/*
+cd .config/gh
+ls
+nvim config.yml
+cd ..
+ls
+cp --parents
+bash cp
+bash
+exit
+ls
+cd dotfiles
+ls
+cd usr
+ls
+cd share
+ls
+cd ..
+ls
+cd .config
+ls
+rm rygel.conf
+rm user-dirs.*
+ls
+cd ..
+git rm --cached rygel.conf
+git .gitignore
+touch .gitignore
+ls
+nvim .gitignore
+ls
+cd .config
+ls
+nvim .gitignore
+git add *
+exit
+ls
+clear
+cp -r ~/.config ./.config
+ls
+git add *
+ls
+cd .config
+ls
+cd ..
+ls
+cd .config
+ls
+rm .config/
+rm -rf .config/
+cd ..
+ls
+clear
