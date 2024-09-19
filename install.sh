@@ -34,7 +34,7 @@ if [ ! "$confirmed" = "y" ]; then
 	echo "Please make sure that you navigated to the right path for the repository"
 	exit 0
 else
-	cp --parents -r $dir/.config/* $HOME/.config/
+	cp --parents $dir/.config/* $HOME/.config/
 	sudo cp ./usr/share/backgrounds/catppuccin_triangle.png /usr/share/backgrounds/
 	echo "Installation Completed"
 	echo "Happy ricing!"
