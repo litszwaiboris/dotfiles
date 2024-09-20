@@ -22,21 +22,5 @@ clear
 
 echo "Installing configurations"
 
-echo "Copying config and settings"
-cd "$(dirname "$0")"
-dir=$(pwd)
-
-printf "Is this the correct dotfiles repository directory? %s n/y " $dir
-
-read confirmed
-
-if [ ! "$confirmed" = "y" ]; then
-	echo "Please make sure that you navigated to the right path for the repository"
-	exit 0
-else
-	cp --parents $dir/.config/* $HOME/.config/
-	sudo cp ./usr/share/backgrounds/catppuccin_triangle.png /usr/share/backgrounds/
-	echo "Installation Completed"
-	echo "Happy ricing!"
-	exit 0
-fi
+echo "Copy configuration files from .config inside the repo to <your user folder>/.config"
+echo "Copy files in /usr/share to /usr/share in your machine"
