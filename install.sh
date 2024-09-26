@@ -24,3 +24,5 @@ echo "Installing configurations"
 
 echo "Copy configuration files from .config inside the repo to <your user folder>/.config"
 echo "Copy files in /usr/share to /usr/share in your machine"
+
+echo "You may also install rEFInd as your boot manager and copy the configs for a more complete experience"
