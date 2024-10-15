@@ -26,7 +26,7 @@ clear
 
 # Installing SF-Symbols, Yabai, Skhd, Sketchybar
 echo "Installing required packages"
-brew install koekeishiya/formulae/{skhd,yabai}
+brew install --cask nikitabobko/tap/aerospace
 brew tap FelixKratz/formulae
 brew install sketchybar skhd yabai
 brew install --cask sf-symbols
