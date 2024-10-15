@@ -1,27 +1,19 @@
-LABEL=$(networksetup -getairportnetwork en0 | awk '{$1 = ""; $2 = ""; $3 = ""; print}' | sed 's/ //g')
+LABEL=$(ipconfig getsummary en0 | awk -F ' SSID : '  '/ SSID : / {print $2}')
 
-get=$(networksetup -getairportpower en0 | awk '{print $4}')
-
-ethernet=$(ifconfig | grep en8)
-
-if [[ ! -z $ethernet ]]; then
-  networksetup -setairportpower en0 off
-fi
+get=$(networksetup -getairportpower en0 | awk 'NR==1 {print $4}')
 
 if [[ $get == "On" ]]; then
-  sketchybar -m --set $NAME icon="󰖩 " \
-  	                        label.drawing=on
+  if [ -z $LABEL ]; then
+    LABEL="Disconnected"
+  else
+    sketchybar -m --set $NAME icon="󰖩 " \
+  	                          label.drawing=on
+  fi
 fi
 
 if [[ $get == "Off" ]]; then
-  if [[ -z $ethernet ]]; then
-  	sketchybar -m --set $NAME icon="󰖪 " \
-	                            label.drawing=off
-  elif [[ ! -z $ethernet ]]; then
-    sketchybar -m --set $NAME icon="􀩲 " \
-                              label.drawing=on
-    LABEL="Ethernet"
-  fi
+  sketchybar -m --set $NAME icon="󰖪 " \
+	                          label.drawing=off
 fi
 
 sketchybar -m --set $NAME label="$LABEL"

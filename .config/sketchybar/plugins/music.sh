@@ -1,6 +1,4 @@
 source ${HOME}/.config/sketchybar/plugins/music_check.sh
-echo ${#LABEL}
-
 
 if [ $CHECK == "a" ]; then
     ICON="󰝚"
