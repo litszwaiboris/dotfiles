@@ -9,7 +9,7 @@ sudo -v
 clear
 
 echo "Installing Window Manager"
-sudo dnf install waybar hyprland fuzzel light pipewire-utils grim kitty thunar firefox hyprlock hyprpaper -y 
+sudo dnf install waybar hyprland fuzzel light pipewire pipewire-utils pipewire-pulseaudio grim kitty thunar firefox hyprlock hyprpaper -y 
 
 echo "Completed"
 sleep 0.5
