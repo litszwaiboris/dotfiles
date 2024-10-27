@@ -10,8 +10,7 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = ['exec-and-forget sketchybar']
-exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+on-focus-changed = ['exec-and-forget ~/.config/sketchybar/plugins/aerospace_update.sh'
 ]
 
 start-at-login = true
@@ -36,7 +35,7 @@ preset = 'qwerty'
 inner.horizontal = 10
 inner.vertical =   10
 outer.left =       10
-outer.bottom =     50
+outer.bottom =     52
 outer.top =        50
 outer.right =      10
 
@@ -100,6 +99,7 @@ ctrl-alt-shift-enter = 'macos-native-fullscreen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 ctrl-alt-shift-r = 'exec-and-forget /Users/libor/.config/aerospace/restart_wm.sh'
+cmd-q = 'close'
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 #s = ['layout sticky tiling', 'mode main']

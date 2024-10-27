@@ -24,32 +24,27 @@ echo "Completed."
 sleep 0.5
 clear
 
-# Installing SF-Symbols, Yabai, Skhd, Sketchybar
 echo "Installing required packages"
 brew install --cask nikitabobko/tap/aerospace
 brew tap FelixKratz/formulae
-brew install sketchybar skhd yabai
+brew install sketchybar
 brew install --cask sf-symbols
 echo "Completed."
 sleep 0.5
 clear
 
-# Installing Font needed
 echo "Installing MesloLGS Nerd Font"
 brew tap homebrew/cask-fonts
 brew install font-meslo-lg-nerd-font
 echo "Completed."
 echo "Prerequisites installed successfully"
-# End Prerequisites
 
 echo "Installing configurations"
 
-# Accent Color (Dark Blue)
 echo "Setting up macOS accent color"
 defaults write -g NSColorSimulatedHardwareAccent -bool true
 defaults write -g NSColorSimulatedHardwareEnclosureNumber -int 5
 
-# Hidden desktop files
 success=false
 while [ $success = false ]; do
   clear 
@@ -80,7 +75,7 @@ echo "Copying config and settings"
 cd "$(dirname "$0")"
 dir=$(pwd)
 
-cp -r $dir/* $HOME/
+cp -r $dir/.config/* $HOME/.config/
 
 echo "Copy Completed"
 
