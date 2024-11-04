@@ -1,9 +1,7 @@
 #!/bin/bash
 
-entries=" Lock\n󰗽 Logout\n⏾ Suspend\n Reboot\n⏻ Shutdown"
-
 if [[ -z $(pgrep fuzzel) ]]; then
-  selected=$(echo -e $entries|fuzzel --dmenu --icon-theme Papirus-Dark --font="MesloLGS Nerd Font:size=15" --line-height=25 | awk '{print tolower($2)}')
+  selected=$(echo -e " Lock\n󰗽 Logout\n⏾ Suspend\n Reboot\n⏻ Shutdown" | fuzzel --dmenu --icon-theme Papirus-Dark --font="MesloLGS Nerd Font:size=15" -D no -w 50 -l 15 -y 20 --line-height=25 | awk '{print tolower($2)}')
 else
   killall fuzzel
 fi

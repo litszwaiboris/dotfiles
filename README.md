@@ -20,7 +20,16 @@ This set of dotfiles requires the packages below:
 - Light, Pipewire Utilities (Tools to be compatible with the widgets)
 
 # Installation
-Clone this repository to anywhere and run `install.sh` and it will automatically require your sudo password and install all the packages, apply needed configuration to your computer, and install the rice to your computer!
+### Arch Linux
+`sudo pacman -S fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire pipewire-pulse ttf-meslo-nerd`
+
+### Fedora
+`sudo dnf install fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire-utils pipewire-pulseaudio light`
+
+For Fedora, you have to manually download MesloLGS Regular font with this link
+[MesloLGS NF Regular](https://github.com/romkatv/dotfiles-public/blob/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf)
+
+Clone this repository to anywhere and run `install.sh`, it will apply needed configuration to your computer, and install the rice to your computer!
 
 # Advanced Customization
 This rice have a few components in their respective folders, follow their respective wiki for more information.

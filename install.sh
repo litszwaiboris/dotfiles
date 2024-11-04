@@ -14,11 +14,6 @@ sudo dnf install waybar hyprland fuzzel light pipewire pipewire-utils pipewire-p
 echo "Completed"
 sleep 0.5
 clear
-sudo dnf copr enable che/nerd-fonts -y
-sudo dnf install nerd-fonts -y
-echo "Completed."
-sleep 0.5
-clear
 
 echo "Installing configurations"
 

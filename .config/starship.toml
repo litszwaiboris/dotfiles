@@ -87,7 +87,7 @@ symbol = " "
 symbol = " "
 
 [os]
-format = "$symbol $version"
+format = "[$symbol Arch Linux](bold cyan)"
 disabled = false
 
 [os.symbols]

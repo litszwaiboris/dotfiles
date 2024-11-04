@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","tray"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["custom/updates","backlight","custom/pipewire","network","battery","clock","custom/power"],
+	"modules-right": ["custom/updates","backlight","custom/pipewire","network","battery","clock","custom/nc","custom/power"],
 	
 	"hyprland/workspaces": {
 		"format": "{icon}",
@@ -35,47 +35,52 @@
 		"tooltip": false,
 		"format": " {}%",
 		"interval":1,
-        "on-scroll-up": "light -A 5",
-		"on-scroll-down": "light -U 5"
+        	"on-scroll-up": "blight set +5%",
+		"on-scroll-down": "blight set -5%"
 	},
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format": "{icon}  {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
+    	"battery": {
+        	"states": {
+            		"good": 95,
+            		"warning": 30,
+            		"critical": 20
+        	},
+        	"format": "{icon}  {capacity}%",
+	        "format-charging": " {capacity}%",
+        	"format-plugged": " {capacity}%",
+        	"format-alt": "{time} {icon}",
+        	"format-icons": ["", "", "", "", ""]
+    	},
 	"tray":{
 		"icon-size":18,
 		"spacing": 10
 	},
-    "cpu": {
-        "interval": 15,
-        "format": " {}%",
-        "max-length": 10
-    },
-    "clock": {
-        "interval": 1,
-        "format": "{:%H:%M:%S}"
-    },
-    "custom/launcher":{
-        "format": " ",
-        "on-click": "$HOME/.config/waybar/scripts/launcher.sh"
-    },
-    "custom/power":{
-        "format": " ",
-        "on-click": "$HOME/.config/waybar/scripts/power.sh",
-    },
-    "custom/updates":{
-        "format": "{} Update(s)",
-        "exec": "$HOME/.config/waybar/scripts/checkupdates.sh",
-        "exec-if": "[[ $($HOME/.config/waybar/scripts/checkupdates.sh) != 0 ]]",
-        "interval": 15,
-        "on-click": "kitty -e sudo dnf update -y && notify-send 'The system has been updated' "
-    }
+    	"cpu": {
+        	"interval": 15,
+        	"format": " {}%",
+        	"max-length": 10
+    	},
+    	"clock": {
+        	"interval": 1,
+        	"format": "{:%H:%M:%S}",
+    		"locale": "en_US.UTF-8"
+	},
+    	"custom/launcher": {
+    		"format": "󰣇 ",
+        	"on-click": "$HOME/.config/waybar/scripts/launcher.sh"
+    	},
+	"custom/nc": {
+		"format": " ",
+		"on-click": "swaync-client -t -sw"
+	},
+    	"custom/power": {
+        	"format": " ",
+        	"on-click": "$HOME/.config/waybar/scripts/power.sh",
+    	},
+    	"custom/updates":{
+        	"format": "{} Update(s)",
+        	"exec": "$HOME/.config/waybar/scripts/checkupdates.sh",
+        	"exec-if": "[[ $($HOME/.config/waybar/scripts/checkupdates.sh) != 0 ]]",
+        	"interval": 15,
+        	"on-click": "kitty -e sudo pacman -Syyu --noconfirm && notify-send 'The system has been updated' "
+    	}
 }
