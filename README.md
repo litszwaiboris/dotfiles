@@ -44,5 +44,9 @@ For the scrolling feature on the backlight widget to work correctly, so it actua
 
 # Credits
 The SDDM Theme is from the Corners theme by [@aczw](https://github.com/aczw)
+
+
 The Nerd Fonts by [@ryanoasis](https://github.com/ryanoasis)
+
+
 The creators behind SwayNC, Fuzzel, and the Hypr Team
