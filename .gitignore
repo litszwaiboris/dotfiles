@@ -1,7 +1,5 @@
 .config/gh
 .config/github-copilot
-.config/fish
-.config/nvim
 .config/user-dirs.*
 .config/systemd
 .config/vesktop
