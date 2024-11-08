@@ -21,15 +21,19 @@ This set of dotfiles requires the packages below:
 - Nerd Font (MesloLGS) (Font that I used)
 - Light, Pipewire Utilities (Tools to be compatible with the widgets)
 
-# Installation
+# Installing Prerequisites
 ### Arch Linux
-`sudo pacman -S fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire pipewire-pulse ttf-meslo-nerd qt5-graphicaleffects qt5-svg qt5-quickcontrols2 blight papirus-icon-theme && git clone https://github.com/litszwaiboris/dotfiles && cd ~/dotfiles && install.sh`
+`sudo pacman -S fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire pipewire-pulse ttf-meslo-nerd qt5-graphicaleffects qt5-svg qt5-quickcontrols2 papirus-icon-theme python python-gobject scdoc fakeroot base-devel && git clone https://aur.archlinux.org/blight ~/blight && cd ~/blight && makepkg -si`
 
 ### Fedora
-`sudo dnf install fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire-utils pipewire-pulseaudio light qt5-qtsvg qt5-qtgraphicaleffects qt5-qtquickcontrols2 papirus-icon-theme && git clone https://github.com/litszwaiboris/dotfiles && cd ~/dotfiles && install.sh`
+`sudo dnf install fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire-utils pipewire-pulseaudio light qt5-qtsvg qt5-qtgraphicaleffects qt5-qtquickcontrols2 papirus-icon-theme`
 
 For Fedora, you have to manually download MesloLGS Regular font with this link:
 [MesloLGS NF Regular](https://github.com/romkatv/dotfiles-public/blob/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf)
+
+# Installation
+### Any Linux
+`git clone https://github.com/litszwaiboris/dotfiles ~/dotfiles && cd ~/dotfiles && ./install.sh`
 
 # Advanced Customization
 This rice has a few components in their respective folders, follow their respective wiki for more information.

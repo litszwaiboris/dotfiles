@@ -6,6 +6,8 @@ sudo -v
 
 # SDDM
 sudo cp -r ~/dotfiles/usr/* /usr/
+sudo mkdir /etc/sddm.conf.d
+sudo cp -r ~/dotfiles/etc/sddm.conf.d/* /etc/sddm.conf.d/
 
 # Config
 cp -r ~/dotfiles/.config/ ~/.config/
