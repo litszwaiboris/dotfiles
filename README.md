@@ -19,6 +19,7 @@ This set of dotfiles requires the packages below:
 - SwayNC (Notification Center)
 - SDDM (Login Manager)
 - Nerd Font (MesloLGS) (Font that I used)
+- Papirus Icon Theme
 - Light, Pipewire Utilities (Tools to be compatible with the widgets)
 
 # Installing Prerequisites
@@ -33,7 +34,7 @@ For Fedora, you have to manually download MesloLGS Regular font with this link:
 
 # Installation
 ### Any Linux
-`git clone https://github.com/litszwaiboris/dotfiles ~/dotfiles && cd ~/dotfiles && ./install.sh`
+`git clone https://github.com/litszwaiboris/dotfiles ~/dotfiles && cd ~/dotfiles && git checkout linux-hypr && ./install.sh`
 
 # Advanced Customization
 This rice has a few components in their respective folders, follow their respective wiki for more information.
