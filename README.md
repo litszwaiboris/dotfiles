@@ -23,15 +23,13 @@ This set of dotfiles requires the packages below:
 
 # Installation
 ### Arch Linux
-`sudo pacman -S fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire pipewire-pulse ttf-meslo-nerd qt5-graphicaleffects qt5-svg qt5-quickcontrols2 blight`
+`sudo pacman -S fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire pipewire-pulse ttf-meslo-nerd qt5-graphicaleffects qt5-svg qt5-quickcontrols2 blight papirus-icon-theme && git clone https://github.com/litszwaiboris/dotfiles && cd ~/dotfiles && install.sh`
 
 ### Fedora
-`sudo dnf install fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire-utils pipewire-pulseaudio light qt5-qtsvg qt5-qtgraphicaleffects qt5-qtquickcontrols2`
+`sudo dnf install fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire-utils pipewire-pulseaudio light qt5-qtsvg qt5-qtgraphicaleffects qt5-qtquickcontrols2 papirus-icon-theme && git clone https://github.com/litszwaiboris/dotfiles && cd ~/dotfiles && install.sh`
 
 For Fedora, you have to manually download MesloLGS Regular font with this link:
 [MesloLGS NF Regular](https://github.com/romkatv/dotfiles-public/blob/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf)
-
-Clone this repository anywhere and run `install.sh`, it will apply the needed configuration to your computer, and install the rice to your computer!
 
 # Advanced Customization
 This rice has a few components in their respective folders, follow their respective wiki for more information.

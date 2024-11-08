@@ -1,23 +1,21 @@
 #!/bin/bash
 
-echo "Dotfiles Installer for litszwaiboris/dotfiles"
-
-echo "Installing Prerequisites"
-echo "Please enter your password to allow installation"
-sudo -v
-
-clear
-
-echo "Installing Window Manager"
-sudo dnf install waybar hyprland fuzzel light pipewire pipewire-utils pipewire-pulseaudio grim kitty thunar firefox hyprlock hyprpaper -y 
-
-echo "Completed"
-sleep 0.5
-clear
-
 echo "Installing configurations"
 
-echo "Copy configuration files from .config inside the repo to <your user folder>/.config"
-echo "Copy files in /usr/share to /usr/share in your machine"
+sudo -v
+
+# SDDM
+sudo cp -r ~/dotfiles/usr/* /usr/
+
+# Config
+cp -r ~/dotfiles/.config/ ~/.config/
+
+# Background
+sudo mkdir /usr/share/backgrounds/
+sudo cp ~/dotfiles/catppuccin_triangle.png /usr/share/backgrounds/
+
+# Cursor
+mkdir ~/.local/share/icons/
+cp -r ~/dotfiles/.local/share/icons/* ~/.local/share/icons/
 
 echo "You may also install rEFInd as your boot manager and copy the configs for a more complete experience"
