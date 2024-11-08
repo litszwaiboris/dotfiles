@@ -20,6 +20,4 @@ sudo cp ~/dotfiles/catppuccin_triangle.png /usr/share/backgrounds/
 mkdir ~/.local/share/icons/
 cp -r ~/dotfiles/.local/share/icons/* ~/.local/share/icons/
 
-greetings set org.gnome.desktop.interface icon-theme "Papirus"
-
 echo "You may also install rEFInd as your boot manager and copy the configs for a more complete experience"
