@@ -81,6 +81,6 @@
         	"exec": "$HOME/.config/waybar/scripts/checkupdates.sh",
         	"exec-if": "[[ $($HOME/.config/waybar/scripts/checkupdates.sh) != 0 ]]",
         	"interval": 15,
-        	"on-click": "kitty -e sudo pacman -Syyu --noconfirm && notify-send 'The system has been updated' "
+        	"on-click": "kitty -e sudo pacman -Syyu --noconfirm && if $? == 0; then notify-send 'The system has been updated'; else notify-send 'The update failed to complete'; fi"
     	}
 }
