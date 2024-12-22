@@ -1,3 +1,3 @@
 #! /bin/bash
 
-checkupdates | awk '{print NR}'
+checkupdates | awk 'END{print NR}'

@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","tray"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["custom/updates","backlight","custom/pipewire","network","battery","clock","custom/nc","custom/power"],
+	"modules-right": ["custom/updates","custom/fanspeed","backlight","custom/pipewire","network","battery","clock","custom/nc","custom/power"],
 	
 	"hyprland/workspaces": {
 		"format": "{icon}",
@@ -23,7 +23,9 @@
 		"tooltip": false,
 		"interval": 1,
 		"format": "{}",
-		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"on-click": "pamixer -t",
+		"on-scroll-up": "pamixer -i 5",
+		"on-scroll-down": "pamixer -d 5",
 		"exec": "$HOME/.config/waybar/scripts/volume.sh",
 	},
 	"network": {
@@ -55,32 +57,45 @@
 		"spacing": 10
 	},
     	"cpu": {
-        	"interval": 15,
+        	"interval": 5,
         	"format": " {}%",
         	"max-length": 10
     	},
+	
     	"clock": {
+		"tooltip": false,
         	"interval": 1,
-        	"format": "{:%H:%M:%S}",
+        	"format": "{:%m/%d %H:%M:%S}",
     		"locale": "en_US.UTF-8"
 	},
     	"custom/launcher": {
+		"tooltip": false,
     		"format": "󰣇 ",
         	"on-click": "$HOME/.config/waybar/scripts/launcher.sh"
     	},
 	"custom/nc": {
+		"tooltip": false,
 		"format": " ",
 		"on-click": "swaync-client -t -sw"
 	},
     	"custom/power": {
+		"tooltip": false,
         	"format": " ",
         	"on-click": "$HOME/.config/waybar/scripts/power.sh",
     	},
     	"custom/updates":{
-        	"format": "{} Update(s)",
+		"tooltip": false,
+        	"format": "󰚰 {}",
         	"exec": "$HOME/.config/waybar/scripts/checkupdates.sh",
         	"exec-if": "[[ $($HOME/.config/waybar/scripts/checkupdates.sh) != 0 ]]",
-        	"interval": 15,
-        	"on-click": "kitty -e sudo pacman -Syyu --noconfirm && if $? == 0; then notify-send 'The system has been updated'; else notify-send 'The update failed to complete'; fi"
-    	}
+        	"interval": 120,
+        	"on-click": "kitty -e pkexec pacman -Syyu --noconfirm && if [ $? -ge 0 ]; then notify-send 'The system has been updated'; else notify-send 'The command failed to run'; fi"
+    	},
+	"custom/fanspeed":{
+		"tooltip": false,
+		"format": "󰈐 {}",
+		"on-click": "$HOME/.config/waybar/scripts/fanspeed_toggle.sh",
+		"exec": "$HOME/.config/waybar/scripts/fanspeed.sh",
+		"interval": 5
+	}
 }

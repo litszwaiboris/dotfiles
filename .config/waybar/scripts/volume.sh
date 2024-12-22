@@ -1,10 +1,10 @@
 #! /bin/bash
 
-volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2}' | sed 's/0.0//' | sed 's/0.//')
-mode=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}')
+volume=$(pamixer --get-volume)
+mode=$(pamixer --get-volume-human)
 
-if [[ ! -z  $mode ]]; then
-    echo "  Muted"
+if [[ $mode -eq "muted" ]]; then
+    echo " "
 else
-    echo "  $volume%"
+    echo "  $volume"%
 fi
