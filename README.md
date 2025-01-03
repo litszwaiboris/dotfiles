@@ -14,7 +14,7 @@ This set of dotfiles requires the packages below:
 - Hyprland (Window Manager)
 - Fuzzel (Launcher)
 - Hyprlock (Lock screen)
-- Grim (Screenshot)
+- Grim & Slurp (Screenshot)
 - Hyprpaper (Background)
 - SwayNC (Notification Center)
 - SDDM (Login Manager)
@@ -22,9 +22,14 @@ This set of dotfiles requires the packages below:
 - Papirus Icon Theme
 - Light, Pipewire Utilities (Tools to be compatible with the widgets)
 
+# Additional Apps
+These applications have their theme implemented, but are supplementary
+- Fcitx5 (Input Method - ex. Chinese)
+- rEFInd (Boot Manager for Dual ~~or even single~~ Booting)
+
 # Installing Prerequisites
 ### Arch Linux
-`sudo pacman -S fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire pipewire-pulse ttf-meslo-nerd qt5-graphicaleffects qt5-svg qt5-quickcontrols2 papirus-icon-theme python python-gobject scdoc fakeroot base-devel && git clone https://aur.archlinux.org/blight ~/blight && cd ~/blight && makepkg -si`
+`sudo pacman -S fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire pipewire-pulse ttf-meslo-nerd qt5-graphicaleffects qt5-svg qt5-quickcontrols2 papirus-icon-theme python python-gobject scdoc fakeroot base-devel brightnessctl`
 
 ### Fedora
 `sudo dnf install fish fuzzel hyprland hyprlock hyprpaper kitty starship swaync waybar sddm grim slurp pipewire-utils pipewire-pulseaudio light qt5-qtsvg qt5-qtgraphicaleffects qt5-qtquickcontrols2 papirus-icon-theme`

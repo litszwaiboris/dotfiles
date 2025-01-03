@@ -4,5 +4,4 @@
 .config/systemd
 .config/vesktop
 .config/rygel.conf
-.config/fcitx*
 .config/JetBrains
