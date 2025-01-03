@@ -57,4 +57,6 @@ The SDDM Theme is from the Corners theme by [@aczw](https://github.com/aczw)
 The Nerd Fonts by [@ryanoasis](https://github.com/ryanoasis)
 
 
+The Catppuccin Team [@catppuccin](https://github.com/catppuccin)
+
 The creators behind SwayNC, Fuzzel, and the Hypr Team
