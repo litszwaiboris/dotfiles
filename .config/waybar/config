@@ -1,6 +1,6 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","tray"],
+	"modules-left": ["custom/launcher","cpu","temperature","tray"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["custom/updates","custom/fanspeed","backlight","custom/pipewire","network","battery","clock","custom/nc","custom/power"],
 	
@@ -61,7 +61,12 @@
         	"format": " {}%",
         	"max-length": 10
     	},
-	
+	"temperature": {
+		"interval": 5,
+		"format": " {}°C",
+		"critical-threshold": 80
+	},
+
     	"clock": {
 		"tooltip": false,
         	"interval": 1,
