@@ -18,8 +18,7 @@ echo "Homebrew Installation Completed"
 sleep 0.5
 
 echo "Setting up PATH variable for usage of homebrew"
-echo 'PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
-echo 'PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
+export PATH=/opt/homebrew/bin:$PATH
 echo "Completed."
 sleep 0.5
 clear
@@ -34,7 +33,6 @@ sleep 0.5
 clear
 
 echo "Installing MesloLGS Nerd Font"
-brew tap homebrew/cask-fonts
 brew install font-meslo-lg-nerd-font
 echo "Completed."
 echo "Prerequisites installed successfully"
