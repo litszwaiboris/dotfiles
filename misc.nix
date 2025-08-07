@@ -32,7 +32,4 @@
   nixpkgs.config.allowUnfree = true;
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # VMWare Workstation
-  virtualisation.vmware.host.enable = true;
 }

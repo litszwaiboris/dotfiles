@@ -3,6 +3,9 @@
 {
   services = {
 
+    # Localtime
+    localtimed.enable = true;
+
     # Fingerprint
     fprintd.enable = true;
     
