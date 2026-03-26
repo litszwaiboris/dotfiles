@@ -1,0 +1,8 @@
+{
+  "updateIntervalMinutes": 30,
+  "updateTerminalCommand": "kitty -e",
+  "currentIconName": "world-download",
+  "hideOnZero": true,
+  "customCmdGetNumUpdates": "yay -Quq 2>/dev/null | wc -l",
+  "customCmdDoSystemUpdate": "yay -Syu"
+}
