@@ -4,7 +4,7 @@
     home.username = "yippie";
     home.homeDirectory = "/home/yippie";
 
-    home.stateVersion = "25.11"; # Please read the comment before changing.
+    home.stateVersion = "26.05"; # Please read the comment before changing.
 
     home.packages = [
     ];
@@ -27,6 +27,15 @@
         name = "adw-gtk3-dark";
         package = pkgs.adw-gtk3;
       };
+
+      gtk2.theme = config.gtk.theme;
+      gtk2.force = true;
+
+      gtk3.theme = config.gtk.theme;
+
+      gtk4.enable = false;
+      gtk4.theme = config.gtk.theme;
+
     };
 
     home.file = {
@@ -37,5 +46,4 @@
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
   };
-
 }
