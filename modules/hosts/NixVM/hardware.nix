@@ -21,13 +21,7 @@
 
     swapDevices = [ ];
 
-    hardware.graphics = {
-      enable = true;
-      enable32Bit = true;
-    };
-
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   };
 
 }
-

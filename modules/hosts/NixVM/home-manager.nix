@@ -1,10 +1,14 @@
-{ self, inputs, ...}: {
+{ self, inputs, ...}:
 
+let 
+  system = "x86_64-linux";
+  pkgs = inputs.nixpkgs.legacyPackages.${system};
+in {
   flake.homeConfigurations."yippie" = inputs.home-manager.lib.homeManagerConfiguration {
-    pkgs = import inputs.nixpkgs { system = "aarch64-linux"; };
+
+    inherit pkgs;
     modules = [
       self.nixosModules.homeManagerConfig
     ];
   };
-
 }
