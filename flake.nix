@@ -15,6 +15,8 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    nixos-apple-silicon.url = "github:nix-community/nixos-apple-silicon";
   };
 
   outputs = inputs: 
