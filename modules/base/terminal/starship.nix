@@ -1,11 +1,15 @@
-{ inputs, self, ... }: {
-
-  flake.nixosModules.terminal = { lib, pkgs, ... }: {
-
+{
+  inputs,
+  self,
+  ...
+}: {
+  flake.nixosModules.terminal = {
+    lib,
+    pkgs,
+    ...
+  }: {
     programs = {
-
       starship = {
-
         enable = true;
 
         settings = {
@@ -77,7 +81,7 @@
             disabled = false;
             show_always = true;
           };
-          
+
           hostname = {
             ssh_only = false;
             style = "purple bold";
@@ -89,6 +93,7 @@
     # Font Packages
     fonts.packages = with pkgs; [
       nerd-fonts.meslo-lg
+      noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-color-emoji
