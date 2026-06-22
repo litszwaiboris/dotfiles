@@ -1,0 +1,43 @@
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.nixosModules.NixOS-MacHardware = {
+    config,
+    lib,
+    pkgs,
+    modulesPath,
+    ...
+  }: {
+    imports = [];
+
+    boot.initrd.availableKernelModules = ["usb_storage"];
+    boot.initrd.kernelModules = [];
+    boot.kernelModules = [];
+    boot.extraModulePackages = [];
+
+    fileSystems."/" = {
+      device = "/dev/disk/by-label/NixOS";
+      fsType = "ext4";
+    };
+
+    fileSystems."/boot" = {
+      device = "/dev/disk/by-label/EFI\\x20-\\x20NIXOS";
+      fsType = "vfat";
+      options = [
+        "fmask=0077"
+        "dmask=0077"
+      ];
+    };
+
+    hardware.graphics.enable = true;
+
+    hardware.asahi.enable = true;
+    hardware.asahi.peripheralFirmwareDirectory = ./firmware;
+
+    environment.systemPackages = with pkgs; [mesa];
+
+    nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
+  };
+}
