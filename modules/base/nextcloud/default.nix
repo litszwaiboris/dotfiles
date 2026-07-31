@@ -11,8 +11,6 @@
     services.logind.lidSwitch = "ignore";
     services.logind.lidSwitchExternalPower = "ignore";
 
-    environment.etc."nextcloud-pass".text = "wia1v7BWcLT1Y@!#";
-
     services.nextcloud = {
       enable = true;
       package = pkgs.nextcloud33;
